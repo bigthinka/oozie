@@ -514,14 +514,15 @@ public class CoordELFunctions {
         return ph2_coord_formatOffsetTimeInTz(dateTimeStr, offset, offsetUnit, timezoneStr,format);
     }
 
-    /**
-     * Formats an offset nominal time into timezone
-     *
-     * @param dateTimeStr
-     * @param format
-     * @return
-     * @throws Exception
-     */
+	/**
+	 * Formats an offset nominal time into timezone
+	 * @param offset
+	 * @param offsetUnit
+	 * @param timezoneStr
+	 * @param format
+	 * @return
+	 * @throws Exception
+	 */
     public static String ph2_coord_formatOffsetNominalTimeInTz(int offset, String offsetUnit, String timezoneStr, String format)
     throws Exception {
         String nominalTime = DateUtils.formatDateOozieTZ(getActionCreationtime());
