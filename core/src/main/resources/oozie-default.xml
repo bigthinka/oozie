@@ -928,6 +928,8 @@ will be the requeue interval for the actions which are waiting for a long time w
             MINUTE=org.apache.oozie.coord.CoordELConstants#SUBMIT_MINUTE,
             HOUR=org.apache.oozie.coord.CoordELConstants#SUBMIT_HOUR,
             DAY=org.apache.oozie.coord.CoordELConstants#SUBMIT_DAY,
+            WEEK=org.apache.oozie.coord.CoordELConstants#SUBMIT_WEEK,
+            WEEKYEAR=org.apache.oozie.coord.CoordELConstants#SUBMIT_WEEKYEAR
             MONTH=org.apache.oozie.coord.CoordELConstants#SUBMIT_MONTH,
             YEAR=org.apache.oozie.coord.CoordELConstants#SUBMIT_YEAR
         </value>
@@ -1021,6 +1023,7 @@ will be the requeue interval for the actions which are waiting for a long time w
     <property>
         <name>oozie.service.ELService.ext.functions.coord-job-submit-instances</name>
         <value>
+                    coord:formatTimeTz=org.apache.oozie.coord.CoordELFunctions#ph1_coord_formatTimeTz_echo
         </value>
         <description>
             EL functions declarations, separated by commas, format is [PREFIX:]NAME=CLASS#METHOD.
@@ -1085,6 +1088,7 @@ will be the requeue interval for the actions which are waiting for a long time w
     <property>
         <name>oozie.service.ELService.ext.functions.coord-job-submit-data</name>
         <value>
+        coord:formatTimeTz=org.apache.oozie.coord.CoordELFunctions#ph1_coord_formatTimeTz_echo
         </value>
         <description>
             EL functions declarations, separated by commas, format is [PREFIX:]NAME=CLASS#METHOD.
@@ -1210,6 +1214,7 @@ will be the requeue interval for the actions which are waiting for a long time w
     <property>
         <name>oozie.service.ELService.ext.functions.coord-action-create</name>
         <value>
+        coord:formatTimeTz=org.apache.oozie.coord.CoordELFunctions#ph2_coord_formatTimeTz
         </value>
         <description>
             EL functions declarations, separated by commas, format is [PREFIX:]NAME=CLASS#METHOD.
@@ -1273,6 +1278,7 @@ will be the requeue interval for the actions which are waiting for a long time w
     <property>
         <name>oozie.service.ELService.ext.functions.coord-action-create-inst</name>
         <value>
+        coord:formatTimeTz=org.apache.oozie.coord.CoordELFunctions#ph2_coord_formatTimeTz
         </value>
         <description>
             EL functions declarations, separated by commas, format is [PREFIX:]NAME=CLASS#METHOD.
@@ -1400,6 +1406,7 @@ will be the requeue interval for the actions which are waiting for a long time w
     <property>
         <name>oozie.service.ELService.ext.functions.coord-action-start</name>
         <value>
+        coord:formatTimeTz=org.apache.oozie.coord.CoordELFunctions#ph3_coord_formatTimeTz
         </value>
         <description>
             EL functions declarations, separated by commas, format is [PREFIX:]NAME=CLASS#METHOD.
