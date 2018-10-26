@@ -464,11 +464,6 @@ public class CoordCommandUtils {
             String datasetTz = event.getChild("dataset", event.getNamespace()).getAttributeValue("timezone");
             ELEvaluator eval = CoordELEvaluator.createURIELEvaluator(instanceList[i], datasetTz);
 
-            if (uris.length() > 0) {
-                uris.append(CoordELFunctions.INSTANCE_SEPARATOR);
-                urisWithDoneFlag.append(CoordELFunctions.INSTANCE_SEPARATOR);
-            }
-
             String uriPath = CoordELFunctions.evalAndWrap(eval, event.getChild("dataset", event.getNamespace())
                     .getChild("uri-template", event.getNamespace()).getTextTrim());
             URIHandler uriHandler = uriService.getURIHandler(uriPath);
