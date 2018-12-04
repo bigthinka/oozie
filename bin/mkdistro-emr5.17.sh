@@ -65,7 +65,7 @@ cd ${BASEDIR}
 export DATETIME=`date -u "+%Y.%m.%d-%H:%M:%SGMT"`
 setRevUrl
 
-MVN_OPTS="-DskipTests -Dbuild.time=${DATETIME} -Dvc.revision=${VC_REV} -Dvc.url=${VC_URL} -DgenerateDocs"
+MVN_OPTS="-DskipTests -Dmaven.test.skip=true -Dbuild.time=${DATETIME} -Dvc.revision=${VC_REV} -Dvc.url=${VC_URL} -DgenerateDocs -Dhadoop.version=2.8.4 -Dpig.version=0.17.0 -Dpig.classifier= -Dhive.version=2.3.3 -Dhbase.version=1.4.6 -Dsqoop.version=1.4.7 -Dsqoop.classifier=hadoop260 -Dtez.version=0.8.4"
 
 export DATETIME2=`date -u "+%Y%m%d-%H%M%SGMT"`
 mvn clean package assembly:single ${MVN_OPTS} "$@"
